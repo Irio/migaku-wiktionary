@@ -1,5 +1,7 @@
 from lxml import etree
 
+from migaku_wiktionary.page import Page
+
 
 class XMLParser:
     """
@@ -18,11 +20,26 @@ class XMLParser:
         self.filepath = filepath
         self.tree = None
 
-    def parse(self):
-        self.read_file()
+    def parse(self, language=None):
+        self.create_tree()
+        return self.parse_pages(language)
+
+    def create_tree(self, xml=None):
+        if xml is None:
+            xml = self.read_file()
+        self.tree = etree.fromstring(xml)
 
     def read_file(self):
         xml = ""
         with open(self.filepath) as file:
             xml = file.read()
-        self.tree = etree.fromstring(xml)
+        return xml
+
+    def parse_pages(self, filtered_language=None):
+        pages = []
+        for node in self.tree:
+            if node.tag.endswith("page"):
+                page = Page(node)
+                if filtered_language is None or page.language == filtered_language:
+                    pages.append(page)
+        return pages
