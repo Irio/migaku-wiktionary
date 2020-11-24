@@ -14,7 +14,7 @@ class XMLParser:
     [1]: https://dumps.wikimedia.org/backup-index.html
     """
 
-    def __init__(self, filepath="data/dewiktionary-latest-pages-meta-current.xml"):
+    def __init__(self, filepath):
         self.filepath = filepath
         self.tree = None
 
