@@ -1,0 +1,189 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.10/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.10/ http://www.mediawiki.org/xml/export-0.10.xsd" version="0.10" xml:lang="de">
+  <siteinfo>
+    <sitename>Wiktionary</sitename>
+    <dbname>dewiktionary</dbname>
+    <base>https://de.wiktionary.org/wiki/Wiktionary:Hauptseite</base>
+    <generator>MediaWiki 1.36.0-wmf.16</generator>
+    <case>case-sensitive</case>
+    <namespaces>
+      <namespace key="-2" case="case-sensitive">Medium</namespace>
+      <namespace key="-1" case="first-letter">Spezial</namespace>
+      <namespace key="0" case="case-sensitive" />
+      <namespace key="1" case="case-sensitive">Diskussion</namespace>
+      <namespace key="2" case="first-letter">Benutzer</namespace>
+      <namespace key="3" case="first-letter">Benutzer Diskussion</namespace>
+      <namespace key="4" case="case-sensitive">Wiktionary</namespace>
+      <namespace key="5" case="case-sensitive">Wiktionary Diskussion</namespace>
+      <namespace key="6" case="case-sensitive">Datei</namespace>
+      <namespace key="7" case="case-sensitive">Datei Diskussion</namespace>
+      <namespace key="8" case="first-letter">MediaWiki</namespace>
+      <namespace key="9" case="first-letter">MediaWiki Diskussion</namespace>
+      <namespace key="10" case="case-sensitive">Vorlage</namespace>
+      <namespace key="11" case="case-sensitive">Vorlage Diskussion</namespace>
+      <namespace key="12" case="case-sensitive">Hilfe</namespace>
+      <namespace key="13" case="case-sensitive">Hilfe Diskussion</namespace>
+      <namespace key="14" case="case-sensitive">Kategorie</namespace>
+      <namespace key="15" case="case-sensitive">Kategorie Diskussion</namespace>
+      <namespace key="102" case="case-sensitive">Verzeichnis</namespace>
+      <namespace key="103" case="case-sensitive">Verzeichnis Diskussion</namespace>
+      <namespace key="104" case="case-sensitive">Thesaurus</namespace>
+      <namespace key="105" case="case-sensitive">Thesaurus Diskussion</namespace>
+      <namespace key="106" case="case-sensitive">Reim</namespace>
+      <namespace key="107" case="case-sensitive">Reim Diskussion</namespace>
+      <namespace key="108" case="case-sensitive">Flexion</namespace>
+      <namespace key="109" case="case-sensitive">Flexion Diskussion</namespace>
+      <namespace key="110" case="case-sensitive">Rekonstruktion</namespace>
+      <namespace key="111" case="case-sensitive">Rekonstruktion Diskussion</namespace>
+      <namespace key="828" case="case-sensitive">Modul</namespace>
+      <namespace key="829" case="case-sensitive">Modul Diskussion</namespace>
+      <namespace key="2300" case="case-sensitive">Gadget</namespace>
+      <namespace key="2301" case="case-sensitive">Gadget Diskussion</namespace>
+      <namespace key="2302" case="case-sensitive">Gadget-Definition</namespace>
+      <namespace key="2303" case="case-sensitive">Gadget-Definition Diskussion</namespace>
+    </namespaces>
+  </siteinfo>
+  <page>
+    <title>Wochenende</title>
+    <ns>0</ns>
+    <id>21506</id>
+    <revision>
+      <id>8276994</id>
+      <parentid>8273667</parentid>
+      <timestamp>2020-11-15T13:32:40Z</timestamp>
+      <contributor>
+        <username>Akybgd</username>
+        <id>179298</id>
+      </contributor>
+      <comment>/* {{Übersetzungen}} */</comment>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text bytes="6415" xml:space="preserve">== Wochenende ({{Sprache|Deutsch}}) ==
+=== {{Wortart|Substantiv|Deutsch}}, {{n}} ===
+
+{{Deutsch Substantiv Übersicht
+|Genus=n
+|Nominativ Singular=Wochenende
+|Nominativ Plural=Wochenenden
+|Genitiv Singular=Wochenendes
+|Genitiv Plural=Wochenenden
+|Dativ Singular=Wochenende
+|Dativ Plural=Wochenenden
+|Akkusativ Singular=Wochenende
+|Akkusativ Plural=Wochenenden
+}}
+
+{{Worttrennung}}
+:Wo·chen·en·de, {{Pl.}} Wo·chen·en·den
+
+{{Aussprache}}
+:{{IPA}} {{Lautschrift|ˈvɔxn̩ˌʔɛndə}}
+:{{Hörbeispiele}} {{Audio|De-Wochenende.ogg}}, {{Audio|De-at-Wochenende.ogg|spr=at}}
+
+{{Bedeutungen}}
+:[1] meist [[arbeitsfrei|arbeits-]] und [[schulfrei]]es [[Ende]] der [[Woche]]; [[Freitagabend]], [[Samstag]] und [[Sonntag]]
+
+{{Abkürzungen}}
+:[1] [[WE]]
+
+{{Herkunft}}
+:[[Determinativkompositum]], zusammengesetzt aus den Substantiven ''[[Woche]]'' und ''[[Ende]]'' sowie dem [[Fugenelement]] ''[[-n]].'' Seit dem 1. Weltkrieg „nach dem Vorbild von englisch {{Ü|en|weekend}} auch ›Freizeit von Samstag (Vormittag oder Nachmittag) bis Sonntagabend‹, heute zumeist ›von Freitagnachmittag an‹, auch ›arbeitsfreie Zeit‹“.&lt;ref&gt; Hermann Paul: ''Deutsches Wörterbuch'', Stichwort „Woche“.&lt;/ref&gt;
+
+{{Synonyme}}
+:[1] [[Weekend]]
+
+{{Gegenwörter}}
+:[1] [[Werktag]]
+:[1] [[Wochenanfang]]
+
+{{Oberbegriffe}}
+:[1] strukturell: [[Ende]]; [[Zeitraum]]
+
+{{Unterbegriffe}}
+:[1] [[Abstimmungswochenende]], [[Ferienwochenende]], [[Gulaschwochenende]], [[Osterwochenende]], [[Pfingstwochenende]], [[Rennwochenende]], [[Themenwochenende]], [[Superwochenende]]
+
+{{Beispiele}}
+:[1] Kommst du am ''Wochenende'' mit ins Kino?
+:[1] „Trotzdem ist es kein Wunder, dass dieses »Downgrading« am ''Wochenende'' rund um die Welt hohe Wellen geschlagen hat.“&lt;ref&gt;{{Literatur|Autor=Andreas Geldner|Titel=Angstvoller Blick in den Strudel|Sammelwerk=Eichsfelder Tageblatt|Nummer= 183}}, 8.8.2011, Seite 4.&lt;/ref&gt;
+:[1] „Während das ''Wochenende'' mit der Zeit und der schnellsten Verbindung vornehmlich rechnen muß, hat der Sommerfrischler mehr Zeit und Muße zur Auswahl und Fahrt zur Sommerfrische.“&lt;ref&gt;{{Literatur| Autor= Felix Meyer | Titel= Wochenende und Sommerfrische an Mosel und Saar | Verlag= Verlag &quot;Werbedruck&quot; für Kunden- und Verkehrswerbung | Ort= Traben-Trarbach | Jahr= 1928 | ISBN= | Seiten= 10.}}&lt;/ref&gt;
+:[1] „Papa war nach Meppen versetzt worden, hatte sich da zwei Zimmer mit Bad gemietet und kam nur noch am ''Wochenende'' nachhause.“&lt;ref&gt;{{Literatur | Autor= Gerhard Henschel | Titel= Kindheitsroman | TitelErg= | Verlag= Hoffmann und Campe | Ort= Hamburg |Jahr= 2004| Seiten= 346.|ISBN= 3-455-03171-4}}&lt;/ref&gt;
+:[1] „Am ''Wochenende'' rief meine Mutter an.“&lt;ref&gt;{{Literatur| Autor= Hatice Akyün| Titel= Verfluchte anatolische Bergziegenkacke oder wie mein Vater sagen würde: Wenn die Wut kommt, geht der Verstand| TitelErg= | Verlag= Kiepenheuer &amp; Witsch| Ort= Köln |Jahr= 2014| ISBN= 978-3-462-04699-1}}, Seite 29.&lt;/ref&gt;
+
+{{Charakteristische Wortkombinationen}}
+:[1] ''mit [[Adjektiv]]:'' [[schön]]es ''Wochenende'', [[sturmfrei]]es ''Wochenende'' ({{Audio|De-sturmfreies Wochenende.ogg|Audio}}), [[verlängert]]es ''Wochenende''
+
+{{Wortbildungen}}
+:[1] [[Wochenendabsenkung]], [[Wochenendarbeit]], [[Wochenendausflug]], [[Wochenendausgabe]], [[Wochenendbeilage]], [[Wochenendbeziehung]], [[Wochenenddienst]], [[Wochenendehe]], [[Wochenendeinkauf]], [[Wochenendgrundstück]], [[Wochenendfahrt]], [[Wochenendhaus]], [[Wochenendlaune]], [[Wochenendreise]], [[Wochenendseminar]], [[Wochenendstimmung]], [[Wochenendticket]]
+
+==== {{Übersetzungen}} ====
+{{Ü-Tabelle|Ü-links=
+*{{sq}}: [1] {{Ü|sq|fundjavë}} {{f}}
+*{{ar}}: [1] {{Üt|ar|نهاية الأسبوع|nhạyẗ ạlạ̉sbwʿ}} {{f}}
+*{{bs}}: [1] {{Üt|bs|викенд|vikend}} {{m}}
+*{{bg}}: [1] {{Üt|bg|уикенд|uikend}} {{m}}, {{Üt|bg|събота и неделя|sabota i nedelja}} {{f}}
+*{{da}}: [1] {{Ü|da|weekend}} {{u}}
+*{{en}}: [1] {{Ü|en|weekend}}
+*{{eo}}: [1] {{Ü|eo|semajnfino}}
+*{{et}}: [1] {{Ü|et|nädalalõpp}}, {{Ü|et|nädalavahetus}}
+*{{fo}}: [1] {{Ü|fo|vikuskifti}} {{n}}
+*{{fi}}: [1] {{Ü|fi|viikonloppu}}
+*{{fr}}: [1] {{Ü|fr|week-end}} {{m}}, {{Ü|fr|fin de semaine}} {{f}}
+*{{gl}}: [1] {{Ü|gl|fin de semana}} {{f}}
+*{{ka}}: [1] {{Üt|ka|უიკენდი|uik'endi}}
+*{{el}}: [1] {{Üt|el|σαββατοκύριακο|savvatokýriako}} {{n}}
+*{{id}}: [1] {{Ü|id|akhir}} {{Ü|id|pekan}}, {{Ü|id|akhir}} {{Ü|id|minggu}}
+*{{ga}}: [1] {{Ü|ga|deireadh seachtaine}} {{m}}
+*{{is}}: [1] {{Ü|is|helgi}} {{f}}
+*{{it}}: [1] {{Ü|it|fine settimana}} {{m}}, {{Ü|it|weekend}} {{m}}
+*{{ja}}: [1] {{Üt|ja|週末|しゅうまつ, shūmatsu}}
+*{{ca}}: [1] {{Ü|ca|cap de setmana}} {{m}}
+*{{ko}}: [1] {{Üt|ko|주말|週末, jumal}}
+*{{kw}}: [1] {{Ü|kw|penn-seythen}} {{m}}
+*{{hr}}: [1] {{Ü|hr|vikend}} {{m}}
+*{{ku}}:
+**{{kmr}}: [1] {{Ü|kmr|dawiya hefteyê}} {{f}}
+|Ü-rechts=
+*{{la}}: [1] {{Ü|la|septimana vergens}} {{f}}
+*{{lv}}: [1] {{Ü|lv|vīkends}}
+*{{lt}}: [1] {{Ü|lt|savaitgalis}}
+*{{gv}}: [1] {{Ü|gv|jerrey shiaghtin}}
+*{{mk}}: [1] {{Üt|mk|викенд|vikend}} {{m}}
+*{{nds}}: [1] {{Ü|nds|Wekenenn}} {{n}}
+*{{nl}}: [1] {{Ü|nl|weekend}} {{n}}, {{Ü|nl|weekeinde}} {{n}}
+*{{se}}: [1] {{Ü|se|vahkkoloahppa}}
+*{{no}}: [1] {{Ü|no|helg}} {{mf}}
+*{{oc}}: [1] {{Ü|oc|dimenjada}}
+*{{pl}}: [1] {{Ü|pl|weekend}} {{m}}
+*{{pt}}: [1] {{Ü|pt|fim de semana}} {{m}}
+*{{ro}}: [1] {{Ü|ro|weekend}} {{n}}
+*{{ru}}: [1] {{Üt|ru|выходные|vihodnie}} ''Pl.'', {{Üt|ru|конец недели|konéc nedéli}} {{m}}
+*{{gd}}: [1] {{Ü|gd|deireadh-seachdain}} {{m}}
+*{{sv}}: [1] {{Ü|sv|veckoslut}} {{n}}, {{Ü|sv|helg}} {{u}}, {{Ü|sv|weekend}} {{u}}
+*{{sr}}: [1] {{Üt|sr|викенд|vikend}} {{m}}
+*{{sh}}: [1] {{Üt|sh|викенд|vikend}} {{m}}
+*{{sk}}: [1] {{Ü|sk|víkend}} {{m}}
+*{{sl}}: [1] {{Ü|sl|vikend}} {{m}}, {{Ü|sl|konec tedna}} {{m}}
+*{{wen}}:
+**{{dsb}}: [1] {{Ü|dsb|kóńc tyźenja}} {{m}}
+**{{hsb}}: [1] {{Ü|hsb|kónc tydźenja}} {{m}}
+*{{es}}: [1] {{Ü|es|fin de semana}} {{m}}
+*{{cs}}: [1] {{Ü|cs|víkend}} {{m}}
+*{{tr}}: [1] {{Ü|tr|hafta sonu}}
+*{{uk}}: [1] {{Üt|uk|вихідні|vihidni}}
+*{{hu}}: [1] {{Ü|hu|hétvége}}
+*{{cy}}: [1] {{Ü|cy|penwythnos}} {{m}}
+*{{be}}: [1] {{Üt|be|выхадныя|vihadnija}}
+}}
+
+{{Referenzen}}
+:[1] {{Wikipedia}}
+:[1] {{Ref-DWDS}}
+:[1] {{Ref-UniLeipzig}}
+:[1] {{Ref-FreeDictionary}}
+:[1] {{Ref-Duden}}
+:[1] {{Ref-Grimm}}
+
+{{Quellen}}</text>
+      <sha1>muxb7x5xiqlgtpic4byqjfwr5w0m18s</sha1>
+    </revision>
+  </page>
+</mediawiki>
