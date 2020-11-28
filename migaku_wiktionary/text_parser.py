@@ -1,4 +1,15 @@
-OPERATIONS = []
+import re
+
+
+def remove_anchors(text):
+    return re.sub(r"\[\[([a-zA-ZÀ-ž\-]+\|)?([a-zA-ZÀ-ž\-]+)\]\]", r"\2", text)
+
+
+def replace_new_lines(text):
+    return re.sub(r"\n", "<br>", text)
+
+
+OPERATIONS = [replace_new_lines, remove_anchors]
 
 
 class TextParser:
