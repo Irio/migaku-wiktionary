@@ -11,9 +11,8 @@ def create_tree(xml):
 
 @pytest.fixture(scope="module")
 def subject():
-    return XMLParser(
-        "./tests/fixtures/dewiktionary-latest-pages-meta-current_sample.xml"
-    ).parse()[0]
+    path = "./tests/fixtures/dewiktionary-latest-pages-meta-current_sample.xml"
+    return [page for page in XMLParser(path).parse()][0]
 
 
 def test_title(subject):
@@ -34,3 +33,15 @@ def test_language_when_not_detected():
     """
     subject = Page(create_tree(xml))
     assert subject.language is None
+
+
+def test_text():
+    xml = """
+    <page>
+        <revision>
+            <text>1. This is a word.</text>
+        </revision>
+    </page>
+    """
+    subject = Page(create_tree(xml))
+    assert subject.text == "1. This is a word."

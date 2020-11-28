@@ -36,10 +36,11 @@ class XMLParser:
         return xml
 
     def parse_pages(self, filtered_language=None):
-        pages = []
         for node in self.tree:
             if node.tag.endswith("page"):
                 page = Page(node)
-                if filtered_language is None or page.language == filtered_language:
-                    pages.append(page)
-        return pages
+                has_selected_language = (
+                    filtered_language is None or page.language == filtered_language
+                )
+                if page.contains_term_definition and has_selected_language:
+                    yield page

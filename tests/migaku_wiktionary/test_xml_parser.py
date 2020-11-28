@@ -26,7 +26,8 @@ def test_parse_with_language_filter(subject, mocker):
 
 def test_parse_returns_pages(subject, mocker):
     page_mock = mocker.patch("migaku_wiktionary.xml_parser.Page")
-    assert subject.parse() == [page_mock.return_value]
+    pages = [page for page in subject.parse()]
+    assert pages == [page_mock.return_value]
 
 
 def test_create_tree_stores_tree_in_instance_var(subject, mocker):
@@ -36,7 +37,7 @@ def test_create_tree_stores_tree_in_instance_var(subject, mocker):
 
 def test_parse_pages_returns_a_page_for_each_page_element(subject):
     subject.create_tree()
-    pages = subject.parse_pages()
+    pages = [page for page in subject.parse_pages()]
     assert len(pages) == 1
 
 
@@ -55,6 +56,6 @@ def test_parse_pages_with_language_filter(subject, mocker):
         </mediawiki>
         """
     )
-    pages = subject.parse_pages("Deutsch")
+    pages = [page for page in subject.parse_pages("Deutsch")]
     assert len(pages) == 1
     assert pages[0].language == "Deutsch"
