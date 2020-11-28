@@ -1,7 +1,13 @@
 import pytest
 
-from migaku_wiktionary.text_parser import (TextParser, remove_anchors,
-                                           replace_new_lines)
+from migaku_wiktionary.text_parser import (
+    TextParser,
+    remove_anchors,
+    remove_audio_examples,
+    remove_ref_tags,
+    replace_new_lines,
+)
+from migaku_wiktionary.xml_parser import XMLParser
 
 
 def test_parse_applies_operations_in_order(mocker):
@@ -28,3 +34,32 @@ def test_replace_new_lines():
     text = "{{Synonyme}}\n:[1] [[Weekend]]\n\n{{Synonyme}}"
     expected = "{{Synonyme}}<br>:[1] [[Weekend]]<br><br>{{Synonyme}}"
     assert replace_new_lines(text) == expected
+
+
+def test_remove_audio_examples():
+    text = """{{Aussprache}}
+:{{IPA}} {{Lautschrift|ˈvɔxn̩ˌʔɛndə}}
+:{{Hörbeispiele}} {{Audio|De-Wochenende.ogg}}, {{Audio|De-at-Wochenende.ogg|spr=at}}
+
+{{Bedeutungen}}"""
+    expected = """{{Aussprache}}
+:{{IPA}} {{Lautschrift|ˈvɔxn̩ˌʔɛndə}}
+
+{{Bedeutungen}}"""
+    assert remove_audio_examples(text) == expected
+
+
+def test_remove_ref_tags():
+    text = ":[1] „Papa war nach Meppen versetzt worden, hatte sich da zwei Zimmer mit Bad gemietet und kam nur noch am ''Wochenende'' nachhause.“<ref>{{Literatur | Autor= Gerhard Henschel | Titel= Kindheitsroman | TitelErg= | Verlag= Hoffmann und Campe | Ort= Hamburg |Jahr= 2004| Seiten= 346.|ISBN= 3-455-03171-4}}</ref>"
+    expected = ":[1] „Papa war nach Meppen versetzt worden, hatte sich da zwei Zimmer mit Bad gemietet und kam nur noch am ''Wochenende'' nachhause.“"
+    assert remove_ref_tags(text) == expected
+
+
+def test_parse_integration():
+    pages = XMLParser(
+        "./tests/fixtures/dewiktionary-latest-pages-meta-current_sample.xml"
+    ).parse()
+    text = next(pages).text
+    subject = TextParser(text)
+    with open("./tests/fixtures/output.txt", "w") as file:
+        file.write(subject.parse())

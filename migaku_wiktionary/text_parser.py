@@ -2,14 +2,23 @@ import re
 
 
 def remove_anchors(text):
+    # return text
     return re.sub(r"\[\[([a-zA-ZÀ-ž\-]+\|)?([a-zA-ZÀ-ž\-]+)\]\]", r"\2", text)
+
+
+def remove_audio_examples(text):
+    return re.sub(r"\n\:\{\{Hörbeispiele\}\}.+\n", "\n", text)
+
+
+def remove_ref_tags(text):
+    return re.sub(r"\<ref\>.+\<\/ref\>", "", text)
 
 
 def replace_new_lines(text):
     return re.sub(r"\n", "<br>", text)
 
 
-OPERATIONS = [replace_new_lines, remove_anchors]
+OPERATIONS = [remove_anchors, remove_audio_examples, remove_ref_tags, replace_new_lines]
 
 
 class TextParser:
