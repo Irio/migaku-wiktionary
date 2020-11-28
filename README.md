@@ -1,5 +1,7 @@
 # Wiktionary Migaku Dictionary
 
+_Parses a Wiktionary database dump into a [Migaku Dictionary](https://github.com/migaku-official/Migaku-Dictionary-Addon) (Anki add-on)._
+
 ## Build
 
 Before running the application, you need to setup the environment. We recommend using pyenv as part of that setup.
