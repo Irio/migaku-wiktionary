@@ -9,8 +9,14 @@ Before running the application, you need to setup the environment. We recommend 
 ```shell
 pyenv virtualenv 3.8.3 migaku_wiktionary
 pyenv activate migaku_wiktionary
-pip install -r requirements-dev.txt
 pip install -r requirements.txt
+```
+
+## Usage
+
+```shell
+python cli.py --help
+python cli.py --xml data/dewiktionary-latest-pages-meta-current.xml convert
 ```
 
 # Testing
@@ -18,6 +24,7 @@ pip install -r requirements.txt
 The project is backed by a test suite. Run it with the following command:
 
 ```shell
+pip install -r requirements-dev.txt
 pytest -vv --cov=migaku_wiktionary
 ```
 
