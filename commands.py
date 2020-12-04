@@ -4,12 +4,15 @@ import unidecode
 
 from migaku_wiktionary.exporter import Exporter
 from migaku_wiktionary.serializer import Serializer
+from migaku_wiktionary.wiktionary_dump import WiktionaryDump
 from migaku_wiktionary.xml_parser import XMLParser
 
 
-def download():
+def download(language, destinationpath):
     # Download the latest dump of a language's Wiktionary.
-    pass
+    dump = WiktionaryDump(language, destinationpath)
+    dump.save()
+    dump.decompress()
 
 
 def convert(filepath, destinationpath):

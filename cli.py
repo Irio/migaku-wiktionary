@@ -17,6 +17,11 @@ parser.add_argument(
     help=f"Choose from {', '.join(COMMANDS.keys())}",
 )
 parser.add_argument(
+    "--lang",
+    nargs="?",
+    help="ISO 639-1 language code of the dump to download e.g., de",
+)
+parser.add_argument(
     "--xml",
     nargs="?",
     help="Path for the XML to be parsed e.g., /tmp/dewiktionary-latest-pages-meta-current.xml",
@@ -30,5 +35,7 @@ parser.add_argument(
 args = parser.parse_args()
 
 selected_command = COMMANDS[args.command]
-if args.command == "convert":
+if args.command == "download":
+    selected_command(args.lang, args.destination)
+elif args.command == "convert":
     selected_command(args.xml, args.destination)

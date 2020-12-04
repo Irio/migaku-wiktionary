@@ -16,7 +16,8 @@ pip install -r requirements.txt
 
 ```shell
 python cli.py --help
-python cli.py --xml data/dewiktionary-latest-pages-meta-current.xml convert
+python cli.py --lang de download
+python cli.py --xml data/dewiktionary-20201201-pages-meta-current.xml convert
 ```
 
 # Testing
