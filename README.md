@@ -20,20 +20,20 @@ python cli.py --lang de download
 python cli.py --xml data/dewiktionary-20201201-pages-meta-current.xml convert
 ```
 
-# Testing
+To install one of the exported dictionaries into the Anki's add-on, run the following snippet:
+
+```shell
+time python cli.py --xml data/dewiktionary-latest-pages-meta-current.xml convert
+export DICTIONARY_PATH=~/Library/Application\ Support/Anki2/addons21/Migaku\ Dictionary/user_files/dictionaries/German/de_deutsch
+mkdir -p $DICTIONARY_PATH
+cp /tmp/de_deutsch.json $DICTIONARY_PATH/de_deutsch.json
+```
+
+## Testing
 
 The project is backed by a test suite. Run it with the following command:
 
 ```shell
 pip install -r requirements-dev.txt
 pytest -vv --cov=migaku_wiktionary
-```
-
-To convert an XML already downloaded, run the following snippet:
-
-```shell
-time python cli.py --xml data/dewiktionary-latest-pages-meta-current.xml convert
-export DICTIONARY_PATH=~/Library/Application\ Support/Anki2/addons21/Migaku\ Dictionary/user_files/dictionaries/German/DeutschWiktionary
-mkdir -p $DICTIONARY_PATH
-cp /tmp/dewiktionary-latest-pages-meta-current.json $DICTIONARY_PATH/DeutschWiktionary.json
 ```
