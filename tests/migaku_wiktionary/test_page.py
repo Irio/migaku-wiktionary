@@ -12,7 +12,7 @@ def create_tree(xml):
 @pytest.fixture(scope="module")
 def subject():
     path = "./tests/fixtures/dewiktionary-latest-pages-meta-current_sample.xml"
-    return [page for page in XMLParser(path).parse()][0]
+    return XMLParser(path).parse()["Deutsch"][0]
 
 
 def test_title(subject):
@@ -31,7 +31,19 @@ def test_language_when_not_detected():
         </revision>
     </page>
     """
-    subject = Page(create_tree(xml))
+    subject = Page(create_tree(xml), "de")
+    assert subject.language is None
+
+
+def test_language_when_contains_similar_but_incorrect_match():
+    xml = """
+    <page>
+        <revision>
+            <text>== Wochenende ==\n\nSprache|Deutsch</text>
+        </revision>
+    </page>
+    """
+    subject = Page(create_tree(xml), "de")
     assert subject.language is None
 
 
@@ -43,5 +55,5 @@ def test_text():
         </revision>
     </page>
     """
-    subject = Page(create_tree(xml))
+    subject = Page(create_tree(xml), "de")
     assert subject.text == "1. This is a word."

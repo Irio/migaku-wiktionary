@@ -56,10 +56,8 @@ def test_remove_ref_tags():
 
 
 def test_parse_integration():
-    pages = XMLParser(
-        "./tests/fixtures/dewiktionary-latest-pages-meta-current_sample.xml"
-    ).parse()
-    text = next(pages).text
+    path = "./tests/fixtures/dewiktionary-latest-pages-meta-current_sample.xml"
+    text = XMLParser(path).parse()["Deutsch"][0].text
     subject = TextParser(text)
     with open("./tests/fixtures/output.txt", "w") as file:
         file.write(subject.parse())

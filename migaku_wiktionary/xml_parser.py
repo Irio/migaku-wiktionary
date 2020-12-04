@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 from lxml import etree
 
 from migaku_wiktionary.page import Page
@@ -20,14 +22,25 @@ class XMLParser:
         self.filepath = filepath
         self.tree = None
 
-    def parse(self, language=None):
+    @property
+    def language(self):
         self.create_tree()
-        return self.parse_pages(language)
+        keys = [key for key in self.tree.keys() if key.endswith("lang")]
+        if len(keys) > 0:
+            return self.tree.attrib[keys[0]]
+
+    def parse(self):
+        self.create_tree()
+        pages_dict = defaultdict(list)
+        for page in self.parse_pages():
+            pages_dict[page.language].append(page)
+        return pages_dict
 
     def create_tree(self, xml=None):
-        if xml is None:
-            xml = self.read_file()
-        self.tree = etree.fromstring(xml)
+        if self.tree is None:
+            if xml is None:
+                xml = self.read_file()
+            self.tree = etree.fromstring(xml)
 
     def read_file(self):
         xml = ""
@@ -35,12 +48,9 @@ class XMLParser:
             xml = file.read()
         return xml
 
-    def parse_pages(self, filtered_language=None):
+    def parse_pages(self):
         for node in self.tree:
             if node.tag.endswith("page"):
-                page = Page(node)
-                has_selected_language = (
-                    filtered_language is None or page.language == filtered_language
-                )
-                if page.contains_term_definition and has_selected_language:
+                page = Page(node, self.language)
+                if page.contains_term_definition:
                     yield page

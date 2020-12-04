@@ -1,4 +1,11 @@
+import re
+
 from migaku_wiktionary.text_parser import TextParser
+
+LANGUAGE_TAGS = {
+    "de": "Sprache",
+    "fr": "langue",
+}
 
 
 class Page:
@@ -6,8 +13,9 @@ class Page:
     Parse contents from a <page> tag.
     """
 
-    def __init__(self, tree):
+    def __init__(self, tree, source_language):
         self.tree = tree
+        self.source_language = source_language
         self._title = None
         self._text = None
         self._text_node = None
@@ -20,11 +28,11 @@ class Page:
     @property
     def language(self):
         self.parse_if_empty(self._text_node)
-        strings = self._text_node.text.split("({{Sprache|")
-        if len(strings) > 1:
-            strings = strings[1].split("}}) ==")
-            if len(strings) > 1:
-                return strings[0]
+        language_tag = LANGUAGE_TAGS.get(self.source_language)
+        regex = r"\{\{" + re.escape(language_tag) + r"\|([a-zA-ZÀ-ž\- ]+)\}\}"
+        matches = re.findall(regex, self.text)
+        if len(matches) > 0:
+            return matches[0]
 
     @property
     def text(self):
