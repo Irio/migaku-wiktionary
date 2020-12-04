@@ -30,7 +30,7 @@ class Page:
         self.parse_if_empty(self._text_node)
         language_tag = LANGUAGE_TAGS.get(self.source_language)
         regex = r"\{\{" + re.escape(language_tag) + r"\|([a-zA-ZÀ-ž\- ]+)\}\}"
-        matches = re.findall(regex, self.text)
+        matches = re.findall(regex, self._text_node.text)
         if len(matches) > 0:
             return matches[0]
 
