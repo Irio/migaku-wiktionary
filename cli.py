@@ -2,8 +2,9 @@ import argparse
 import logging
 import sys
 
-import commands
 import progressbar
+
+from migaku_wiktionary import commands
 
 COMMANDS = {
     "download": commands.download,
