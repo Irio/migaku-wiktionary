@@ -8,18 +8,27 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: "3.8.3"
+
+      - uses: actions/cache@v2
+        with:
+          path: ${{ env.pythonLocation }}
+          key: ${{ env.pythonLocation }}-${{ hashFiles('**/requirements.txt', '**/requirements-dev.txt') }}
+
       - name: Install dependencies
         run: |
-          pip install -r requirements-dev.txt
           pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+
       - name: Lint
         run: |
           black --check .
           isort --profile black .
+
       - name: Test
         run: |
           pytest -vv --cov=migaku_wiktionary
