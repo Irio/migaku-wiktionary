@@ -1,11 +1,21 @@
 import argparse
+import logging
+import sys
 
 import commands
+import progressbar
 
 COMMANDS = {
     "download": commands.download,
     "convert": commands.convert,
 }
+
+progressbar.streams.wrap_stderr()
+logging.basicConfig(
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    stream=sys.stdout,
+    level=logging.INFO,
+)
 
 parser = argparse.ArgumentParser(
     description="Parse Wiktionary dump into a Migaku Dictionary."

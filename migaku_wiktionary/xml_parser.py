@@ -1,7 +1,9 @@
+import logging
 from collections import defaultdict
 
 from lxml import etree
 
+from migaku_wiktionary import ProgressBar
 from migaku_wiktionary.page import Page
 
 
@@ -38,6 +40,7 @@ class XMLParser:
 
     def create_tree(self, xml=None):
         if self.tree is None:
+            logging.info("Loading XML in memory…")
             if xml is None:
                 xml = self.read_file()
             self.tree = etree.fromstring(xml)
@@ -49,8 +52,12 @@ class XMLParser:
         return xml
 
     def parse_pages(self):
-        for node in self.tree:
+        logging.info("Parsing XML nodes…")
+        bar = ProgressBar(max_value=len(self.tree), redirect_stdout=True)
+        for index, node in enumerate(self.tree):
+            bar.update(index)
             if node.tag.endswith("page"):
                 page = Page(node, self.language)
                 if page.contains_term_definition:
                     yield page
+        bar.finish()
