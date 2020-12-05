@@ -1,3 +1,4 @@
+import logging
 import os
 import subprocess
 from urllib.parse import urljoin
@@ -34,13 +35,16 @@ class WiktionaryDump:
 
     def save(self):
         with open(self.filepath, "wb") as file:
+            logging.info("Downloading it…")
             response = requests.get(self.file_url)
             file.write(response.content)
 
     def decompress(self):
+        logging.info("Decompressing it…")
         subprocess.run(["bzip2", "-d", self.filepath])
 
     def _fetch_file_attributes(self):
+        logging.info("Fetching the URL of the latest dump…")
         session = HTMLSession()
         response = session.get(INDEX_URL)
         anchors = response.html.xpath(f"//*[text()='{self.language}wiktionary']")
