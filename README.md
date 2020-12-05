@@ -2,6 +2,8 @@
 
 _Parses a Wiktionary database dump into a [Migaku Dictionary](https://github.com/migaku-official/Migaku-Dictionary-Addon) (Anki add-on)._
 
+![Continuous Integration](https://github.com/Irio/migaku-wiktionary/workflows/Continuous%20Integration/badge.svg)
+
 ## Build
 
 Before running the application, you need to setup the environment. We recommend using pyenv as part of that setup.
