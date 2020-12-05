@@ -4,6 +4,7 @@ from migaku_wiktionary.text_parser import TextParser
 
 LANGUAGE_TAGS = {
     "de": "Sprache",
+    "es": "lengua",
     "fr": "langue",
 }
 
