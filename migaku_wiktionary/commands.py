@@ -25,15 +25,6 @@ def convert(filepath, destinationpath):
             if language is not None and len(pages) > 20_000
         }
         return pages_dict
-        # pages_dict = {
-        #     language: pages
-        #     for language, pages in pages_dict.items()
-        #     if language is not None  # and len(pages) > 20_000
-        # }
-        # return sorted(
-        #     pages_dict.items(),
-        #     key=lambda item: -len(item[1]),
-        # )
 
     def generate_output_path(xml_language, xml_path, output_language, output_folder):
         xml_language = normalize_string(xml_language)
