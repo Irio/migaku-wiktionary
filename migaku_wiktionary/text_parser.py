@@ -25,10 +25,6 @@ def remove_contents_after_deep_level_section(text):
     return re.sub(r"\n\n==== .+", "", text, flags=re.DOTALL)
 
 
-def remove_multiline_template_functions(text):
-    return re.sub(r"\{\{.*\n\|(?:\|?.*\n)+\}\}\n{,2}", "", text)
-
-
 def remove_page_header_1(text):
     return re.sub(r"^== (.+) ==\n", "", text)
 
@@ -50,7 +46,6 @@ OPERATIONS = [
     remove_page_header_1,
     change_page_header_2,
     remove_contents_after_deep_level_section,
-    remove_multiline_template_functions,
     remove_anchors,
     remove_audio_examples,
     clear_template_functions,

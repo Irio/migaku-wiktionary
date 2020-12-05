@@ -8,7 +8,6 @@ from migaku_wiktionary.text_parser import (
     remove_anchors,
     remove_audio_examples,
     remove_contents_after_deep_level_section,
-    remove_multiline_template_functions,
     remove_page_header_1,
     remove_ref_tags,
     replace_new_lines,
@@ -96,30 +95,6 @@ def test_remove_page_header_1():
 === {{Wortart|Substantiv|Deutsch}}, {{n}} ==="""
     expected = """=== {{Wortart|Substantiv|Deutsch}}, {{n}} ==="""
     assert remove_page_header_1(text) == expected
-
-
-def test_remove_multiline_template_functions():
-    text = """=== {{Wortart|Substantiv|Deutsch}}, {{n}} ===
-
-{{Deutsch Substantiv Übersicht
-|Genus=n
-|Nominativ Singular=Wochenende
-|Nominativ Plural=Wochenenden
-|Genitiv Singular=Wochenendes
-|Genitiv Plural=Wochenenden
-|Dativ Singular=Wochenende
-|Dativ Plural=Wochenenden
-|Akkusativ Singular=Wochenende
-|Akkusativ Plural=Wochenenden
-}}
-
-{{Worttrennung}}
-:Wo·chen·en·de, {{Pl.}} Wo·chen·en·den"""
-    expected = """=== {{Wortart|Substantiv|Deutsch}}, {{n}} ===
-
-{{Worttrennung}}
-:Wo·chen·en·de, {{Pl.}} Wo·chen·en·den"""
-    assert remove_multiline_template_functions(text) == expected
 
 
 def test_mark_section_headers():
