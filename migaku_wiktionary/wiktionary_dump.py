@@ -29,7 +29,7 @@ class WiktionaryDump:
     def filepath(self):
         if self._filepath is None:
             self._fetch_file_attributes()
-            self._filepath = os.path.join(destinationpath, self._filename)
+            self._filepath = os.path.join(self.destinationpath, self._filename)
         return self._filepath
 
     def save(self):
