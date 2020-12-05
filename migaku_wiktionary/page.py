@@ -28,10 +28,16 @@ class Page:
     @property
     def language(self):
         self.parse_if_empty(self._text_node)
-        language_tag = LANGUAGE_TAGS.get(self.source_language)
-        regex = r"\{\{" + re.escape(language_tag) + r"\|([a-zA-ZÀ-ž\- ]+)\}\}"
-        matches = re.findall(regex, self._text_node.text)
-        if len(matches) > 0:
+        if self._text_node.text is None:
+            return
+        language_tag = LANGUAGE_TAGS[self.source_language]
+        matches = self._text_node.text.split(f"{{{language_tag}|")
+        if len(matches) < 2:
+            return
+        matches = matches[1].split("}}")
+        if len(matches) < 1:
+            return
+        if re.match(r"\A([a-zA-ZÀ-ž\- ]+)\Z", matches[0]):
             return matches[0]
 
     @property
