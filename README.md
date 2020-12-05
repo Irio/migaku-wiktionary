@@ -3,7 +3,6 @@
 _Parses a Wiktionary database dump into a [Migaku Dictionary](https://github.com/migaku-official/Migaku-Dictionary-Addon) (Anki add-on)._
 
 ![Continuous Integration](https://github.com/Irio/migaku-wiktionary/workflows/Continuous%20Integration/badge.svg)
-[![Maintainability](https://api.codeclimate.com/v1/badges/072ef425b8fe05dc20ff/maintainability)](https://codeclimate.com/github/Irio/migaku-wiktionary/maintainability)
 
 ## Build
 

@@ -3,7 +3,7 @@ name: Continuous Integration
 on: [push]
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-20.04
 
     steps:
@@ -32,7 +32,3 @@ jobs:
       - name: Test
         run: |
           pytest -vv --cov=migaku_wiktionary
-
-      - uses: paambaati/codeclimate-action@v2.7.4
-        env:
-          CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
